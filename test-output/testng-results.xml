@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12436" started-at="2019-11-28T11:59:32 IST" finished-at="2019-11-28T11:59:45 IST">
+  <suite name="Default suite" duration-ms="37646" started-at="2019-11-28T12:16:27 IST" finished-at="2019-11-28T12:17:05 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12436" started-at="2019-11-28T11:59:32 IST" finished-at="2019-11-28T11:59:45 IST">
+    <test name="Default test" duration-ms="37646" started-at="2019-11-28T12:16:27 IST" finished-at="2019-11-28T12:17:05 IST">
       <class name="com.store.qa.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.LoginPageTest@2a17b7b6]" name="setUp" is-config="true" duration-ms="5669" started-at="2019-11-28T11:59:32 IST" finished-at="2019-11-28T11:59:38 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.LoginPageTest@67205a84]" name="setUp" is-config="true" duration-ms="23810" started-at="2019-11-28T12:16:27 IST" finished-at="2019-11-28T12:16:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.store.qa.testcases.LoginPageTest@2a17b7b6]" name="loginPageTitleTest" duration-ms="10" started-at="2019-11-28T11:59:38 IST" finished-at="2019-11-28T11:59:38 IST">
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.store.qa.testcases.LoginPageTest@67205a84]" name="loginPageTitleTest" duration-ms="11" started-at="2019-11-28T12:16:51 IST" finished-at="2019-11-28T12:16:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.LoginPageTest@2a17b7b6]" name="tearDown" is-config="true" duration-ms="603" started-at="2019-11-28T11:59:38 IST" finished-at="2019-11-28T11:59:39 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.LoginPageTest@67205a84]" name="tearDown" is-config="true" duration-ms="1141" started-at="2019-11-28T12:16:51 IST" finished-at="2019-11-28T12:16:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.LoginPageTest@2a17b7b6]" name="setUp" is-config="true" duration-ms="4968" started-at="2019-11-28T11:59:39 IST" finished-at="2019-11-28T11:59:44 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.LoginPageTest@67205a84]" name="setUp" is-config="true" duration-ms="11087" started-at="2019-11-28T12:16:52 IST" finished-at="2019-11-28T12:17:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:2, instance:com.store.qa.testcases.LoginPageTest@2a17b7b6]" name="loginTest" duration-ms="557" started-at="2019-11-28T11:59:44 IST" finished-at="2019-11-28T11:59:44 IST">
+        <test-method status="PASS" signature="loginTest()[pri:2, instance:com.store.qa.testcases.LoginPageTest@67205a84]" name="loginTest" duration-ms="877" started-at="2019-11-28T12:17:04 IST" finished-at="2019-11-28T12:17:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.LoginPageTest@2a17b7b6]" name="tearDown" is-config="true" duration-ms="606" started-at="2019-11-28T11:59:44 IST" finished-at="2019-11-28T11:59:45 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.LoginPageTest@67205a84]" name="tearDown" is-config="true" duration-ms="694" started-at="2019-11-28T12:17:04 IST" finished-at="2019-11-28T12:17:05 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
