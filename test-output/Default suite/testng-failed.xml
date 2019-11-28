@@ -5,7 +5,7 @@
     <classes>
       <class name="com.store.qa.testcases.HomePageTest">
         <methods>
-          <include name="HomePageTitileTest"/>
+          <include name="homePageTitileTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

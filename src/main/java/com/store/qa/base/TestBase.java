@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sikuli.script.Screen;
 
 import com.store.qa.util.TestUtil;
 
@@ -18,6 +19,7 @@ public class TestBase {
 	public static Properties prop;
 	public static WebDriver driver;
 	public static WebDriverWait wait;
+	public static Screen s;
 	
 	public TestBase() {
 
@@ -55,6 +57,7 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 5);
+		s = new Screen();
 		
 		driver.get(prop.getProperty("url"));
 		
