@@ -31,25 +31,39 @@ public class SearchPageTest extends TestBase{
 		searchpage = homePage.VerifySearchprojectbox();
 	}
 
-	@Test
+	//@Test
 	public void zuruLogoTest() { 
 		Assert.assertTrue(homePage.validateLogo());
 	}
 	
-	@Test
+	//@Test
 	public void verifySearchBar() {
 		String projectName = searchpage.validateSearch("123");
 		Assert.assertEquals(projectName, "123");
 	}
 	
-	@Test
+	//@Test
 	public void verifySearchBarResult() {
 		Assert.assertTrue(searchpage.validateSearchResult("new"));
 	}
 	
+	//@Test
+	public void verifyFirstProjectPreview() throws InterruptedException {
+		Assert.assertTrue(searchpage.validateFirstProjectPreview("ma"));
+	}
+	
+	//@Test
+	public void verifyProjectNotFound() throws InterruptedException {
+		String noProjectFoundMessage = "We could not find anything that matches \"1234\" and the applied filters\n" + 
+				"Here's some tips to get better results:\n" + 
+				"- Double check your spelling\n" + 
+				"- Try different keywords\n" + 
+				"- Try more generic keywords";
+		Assert.assertEquals(searchpage.validateProjectNotFound("1234"), noProjectFoundMessage);
+	}
 	@Test
-	public void verifyFirstProjectPreview() {
-		Assert.assertTrue(searchpage.validateFirstProjectPreview("Ma"));
+	public void verifyFirstProject() throws InterruptedException {
+		Assert.assertTrue(searchpage.validateFirstProject());
 	}
 
 	@AfterMethod

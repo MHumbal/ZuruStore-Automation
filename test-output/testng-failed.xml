@@ -6,8 +6,8 @@
       <class name="com.store.qa.testcases.SearchPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="verifyFirstProjectPreview"/>
           <include name="tearDown"/>
+          <include name="verifyFirstProject"/>
         </methods>
       </class> <!-- com.store.qa.testcases.SearchPageTest -->
     </classes>

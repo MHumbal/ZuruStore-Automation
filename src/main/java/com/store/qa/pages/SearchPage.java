@@ -1,14 +1,11 @@
 package com.store.qa.pages;
 
-import static org.testng.Assert.assertEquals;
-
 import java.util.List;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.store.qa.base.TestBase;
 
@@ -22,7 +19,6 @@ public class SearchPage extends TestBase{
 	
 	@FindBy(xpath = "//h3[@class='project-detail-heading']")
 	private WebElement backgroundProjectName;
-	
 	
 	@FindBy(xpath = "//div[@class='not-found-section']")
 	private WebElement noProjectFound;
@@ -54,21 +50,36 @@ public class SearchPage extends TestBase{
 	}
 	
 	
-	public Boolean validateFirstProjectPreview(String firstProject) {
+	public Boolean validateFirstProjectPreview(String firstProject) throws InterruptedException {
 		searchBar.sendKeys(firstProject);
 		String searchBarResultFirstProject = searchBarContainer.get(0).getText();
 		System.out.println(searchBarResultFirstProject);
 		searchBar.sendKeys(Keys.RETURN);
+		Thread.sleep(1000);
 		System.out.println(backgroundProjectName.getText());
 		return backgroundProjectName.getText().equals(searchBarResultFirstProject);
 	}
-	
-	public void validateSearchBarContainer(String projectName) {
-		searchBar.sendKeys(projectName);
+
+	public String validateProjectNotFound(String projectFakeName) throws InterruptedException {
+		searchBar.sendKeys(projectFakeName);
+		searchBar.sendKeys(Keys.RETURN);
+		Thread.sleep(1000);
+		return noProjectFound.getText();
 		
+	}
+		
+	public Boolean validateFirstProject() throws InterruptedException{
+		String FirstProj = backgroundProjectName.getText();
+		searchBar.sendKeys("ma");
+		searchBar.sendKeys(Keys.RETURN);
+		Thread.sleep(1000);
+		searchBar.sendKeys(Keys.CONTROL, "A" , Keys.BACK_SPACE);
+		Thread.sleep(1000);
+		return FirstProj.equals(backgroundProjectName.getText());
 		
 		
 	}
+
 
 	
 }
