@@ -53,10 +53,8 @@ public class SearchPage extends TestBase{
 	public Boolean validateFirstProjectPreview(String firstProject) throws InterruptedException {
 		searchBar.sendKeys(firstProject);
 		String searchBarResultFirstProject = searchBarContainer.get(0).getText();
-		System.out.println(searchBarResultFirstProject);
 		searchBar.sendKeys(Keys.RETURN);
 		Thread.sleep(1000);
-		System.out.println(backgroundProjectName.getText());
 		return backgroundProjectName.getText().equals(searchBarResultFirstProject);
 	}
 

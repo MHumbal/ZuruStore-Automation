@@ -14,10 +14,7 @@ public class SearchPageTest extends TestBase{
 	
 	HomePage homePage;
 	LoginPage loginPage;
-	
 	SearchPage searchpage;
-
-
 
 	public  SearchPageTest() {
 		super();
@@ -31,28 +28,28 @@ public class SearchPageTest extends TestBase{
 		searchpage = homePage.VerifySearchprojectbox();
 	}
 
-	//@Test
+	@Test
 	public void zuruLogoTest() { 
 		Assert.assertTrue(homePage.validateLogo());
 	}
 	
-	//@Test
+	@Test
 	public void verifySearchBar() {
 		String projectName = searchpage.validateSearch("123");
 		Assert.assertEquals(projectName, "123");
 	}
 	
-	//@Test
+	@Test
 	public void verifySearchBarResult() {
 		Assert.assertTrue(searchpage.validateSearchResult("new"));
 	}
 	
-	//@Test
+	@Test
 	public void verifyFirstProjectPreview() throws InterruptedException {
 		Assert.assertTrue(searchpage.validateFirstProjectPreview("ma"));
 	}
 	
-	//@Test
+	@Test
 	public void verifyProjectNotFound() throws InterruptedException {
 		String noProjectFoundMessage = "We could not find anything that matches \"1234\" and the applied filters\n" + 
 				"Here's some tips to get better results:\n" + 
