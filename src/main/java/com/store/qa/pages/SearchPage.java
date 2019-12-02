@@ -1,44 +1,33 @@
 package com.store.qa.pages;
 
-import java.util.List;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import com.store.qa.base.TestBase;
 
 public class SearchPage extends TestBase{
 	
-	@FindBy(xpath = "//input[@placeholder='Search for projects']")
-	private WebElement searchBar;
+	//Elements
+	private By searchBar = By.xpath("//input[@placeholder='Search for projects']");
 	
-	@FindBy(xpath = "//li[contains(@id, 'rbt-menu-item')]")
-	private List<WebElement> searchBarContainer;
+	private By searchBarContainer = By.xpath("//li[contains(@id, 'rbt-menu-item')]");
 	
-	@FindBy(xpath = "//h3[@class='project-detail-heading']")
-	private WebElement backgroundProjectName;
+	private By backgroundProjectName = By.xpath("//h3[@class='project-detail-heading']");
 	
-	@FindBy(xpath = "//div[@class='not-found-section']")
-	private WebElement noProjectFound;
+	private By noProjectFound = By.xpath("//div[@class='not-found-section']");
 	
-	
-	public  SearchPage() {
-		PageFactory.initElements(driver, this); 
-	}
-	
-	
+	//Methods
 	public String validateSearch( String fullProjectName) {
-		searchBar.sendKeys(fullProjectName);
-		searchBar.sendKeys(Keys.RETURN);
-		return backgroundProjectName.getText();
+		driver.findElement(searchBar).sendKeys(fullProjectName);
+		driver.findElement(searchBar).sendKeys(Keys.RETURN);
+		return driver.findElement(backgroundProjectName).getText();
 	}
 	
 	public Boolean validateSearchResult(String projectKeyword) {
-		searchBar.sendKeys(projectKeyword);
+		driver.findElement(searchBar).sendKeys(projectKeyword);
 		int flag = 0;
-		for (WebElement webElement : searchBarContainer) {
+		for (WebElement webElement : driver.findElements(searchBarContainer)) {
 			if(!webElement.getText().toUpperCase().contains(projectKeyword.toUpperCase())){
 				flag = 1;
 			}
@@ -51,31 +40,28 @@ public class SearchPage extends TestBase{
 	
 	
 	public Boolean validateFirstProjectPreview(String firstProject) throws InterruptedException {
-		searchBar.sendKeys(firstProject);
-		String searchBarResultFirstProject = searchBarContainer.get(0).getText();
-		searchBar.sendKeys(Keys.RETURN);
+		driver.findElement(searchBar).sendKeys(firstProject);
+		String searchBarResultFirstProject = driver.findElements(searchBarContainer).get(0).getText();
+		driver.findElement(searchBar).sendKeys(Keys.RETURN);
 		Thread.sleep(1000);
-		return backgroundProjectName.getText().equals(searchBarResultFirstProject);
+		return driver.findElement(backgroundProjectName).getText().equals(searchBarResultFirstProject);
 	}
 
 	public String validateProjectNotFound(String projectFakeName) throws InterruptedException {
-		searchBar.sendKeys(projectFakeName);
-		searchBar.sendKeys(Keys.RETURN);
+		driver.findElement(searchBar).sendKeys(projectFakeName);
+		driver.findElement(searchBar).sendKeys(Keys.RETURN);
 		Thread.sleep(1000);
-		return noProjectFound.getText();
-		
+		return driver.findElement(noProjectFound).getText();
 	}
 		
 	public Boolean validateFirstProject() throws InterruptedException{
-		String FirstProj = backgroundProjectName.getText();
-		searchBar.sendKeys("ma");
-		searchBar.sendKeys(Keys.RETURN);
+		String FirstProj = driver.findElement(backgroundProjectName).getText();
+		driver.findElement(searchBar).sendKeys("ma");
+		driver.findElement(searchBar).sendKeys(Keys.RETURN);
 		Thread.sleep(1000);
-		searchBar.sendKeys(Keys.CONTROL, "A" , Keys.BACK_SPACE);
+		driver.findElement(searchBar).sendKeys(Keys.CONTROL, "A" , Keys.BACK_SPACE);
 		Thread.sleep(1000);
-		return FirstProj.equals(backgroundProjectName.getText());
-		
-		
+		return FirstProj.equals(driver.findElement(backgroundProjectName).getText());
 	}
 
 

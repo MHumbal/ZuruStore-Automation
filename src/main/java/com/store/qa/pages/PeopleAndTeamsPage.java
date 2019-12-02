@@ -1,5 +1,7 @@
 package com.store.qa.pages;
 
-public class PeopleAndTeamsPage {
+import com.store.qa.base.TestBase;
 
+public class PeopleAndTeamsPage extends TestBase{
+	
 }

@@ -1,43 +1,32 @@
 package com.store.qa.pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 
 import com.store.qa.base.TestBase;
 
 
 public class LoginPage extends TestBase{
 	
-	//Page Factory
-	@FindBy(xpath="//span[contains(text(),'Login')]")
-	private WebElement login;
+	//Elements
+	private By login = By.xpath("//span[contains(text(),'Login')]");
 	
-	@FindBy(id = "login-input-field")
-	private WebElement email;
+	private By email = By.id("login-input-field");
 	
-	@FindBy (id = "passowrd-input-field")
-	private WebElement password;
+	private By password = By.id("passowrd-input-field");
 	
-	@FindBy	(xpath = "//div[@class='login-checkmark']")
-	private WebElement lognBtn;
+	private By lognBtn = By.xpath("//div[@class='login-checkmark']");
 	
-	//Initialize the Page Objects;
-	
-	public LoginPage() {
-		PageFactory.initElements(driver, this); 
-	}
-	//Actions
+	//Methods
 	public String validateLoginPageTitle() {
 		return driver.getTitle();
 		
 	}
 	
 	public HomePage login(String un,String pwd) {
-		login.click();
-		email.sendKeys(un);
-		password.sendKeys(pwd);
-		lognBtn.click();
+		driver.findElement(login).click();
+		driver.findElement(email).sendKeys(un);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(lognBtn).click();
 		
 		return new HomePage();
 	}

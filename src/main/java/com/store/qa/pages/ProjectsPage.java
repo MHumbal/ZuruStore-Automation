@@ -1,33 +1,17 @@
 package com.store.qa.pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 
 import com.store.qa.base.TestBase;
 
 public class ProjectsPage extends TestBase{
-
-	@FindBy(xpath = "//img[@class = 'home-logo']")
-	private WebElement Zuru;
 	
-	@FindBy(xpath = "//input[@placeholder='Search for projects']")
-	private WebElement Searchtxtbox;
+	//Elements
+	private By Zuru = By.xpath("//img[@class = 'home-logo']");
 	
-	
-	
-	public ProjectsPage() {
-		PageFactory.initElements(driver, this); 
-	}
-	
+	//Methods
 	public void validateHomePage() {
-		Zuru.click();
-	}
-	
-	public void ValidateSearchProject() {
-	
-		
-		
+		driver.findElement(Zuru).click();
 	}
 	
 }

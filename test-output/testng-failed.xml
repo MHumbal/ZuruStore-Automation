@@ -6,8 +6,12 @@
       <class name="com.store.qa.testcases.SearchPageTest">
         <methods>
           <include name="setUp"/>
+          <include name="verifyFirstProjectPreview"/>
+          <include name="verifyProjectNotFound"/>
           <include name="tearDown"/>
-          <include name="verifyFirstProject"/>
+          <include name="verifySearchBar"/>
+          <include name="verifySearchBarResult"/>
+          <include name="zuruLogoTest"/>
         </methods>
       </class> <!-- com.store.qa.testcases.SearchPageTest -->
     </classes>
