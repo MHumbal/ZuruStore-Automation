@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.store.qa.testcases.SearchPageTest">
+      <class name="com.store.qa.testcases.PeopleAndTeamsPageTest">
         <methods>
+          <include name="verifyFollowUnFollow"/>
           <include name="setUp"/>
-          <include name="verifyFirstProjectPreview"/>
-          <include name="verifyProjectNotFound"/>
           <include name="tearDown"/>
-          <include name="verifySearchBar"/>
-          <include name="verifySearchBarResult"/>
-          <include name="zuruLogoTest"/>
         </methods>
-      </class> <!-- com.store.qa.testcases.SearchPageTest -->
+      </class> <!-- com.store.qa.testcases.PeopleAndTeamsPageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
