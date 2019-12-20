@@ -54,12 +54,13 @@ public class SearchPage extends TestBase{
 		return driver.findElement(noProjectFound).getText();
 	}
 		
-	public Boolean validateFirstProject() throws InterruptedException{
+	public Boolean validateFirstProject(String firstProject) throws InterruptedException{
+		driver.findElement(searchBar).sendKeys(firstProject);
 		String FirstProj = driver.findElement(backgroundProjectName).getText();
-		driver.findElement(searchBar).sendKeys("ma");
 		driver.findElement(searchBar).sendKeys(Keys.RETURN);
 		Thread.sleep(1000);
-		driver.findElement(searchBar).sendKeys(Keys.CONTROL, "A" , Keys.BACK_SPACE);
+		driver.findElement(searchBar).sendKeys(Keys.CONTROL, "A");
+		driver.findElement(searchBar).sendKeys(Keys.BACK_SPACE);
 		Thread.sleep(1000);
 		return FirstProj.equals(driver.findElement(backgroundProjectName).getText());
 	}

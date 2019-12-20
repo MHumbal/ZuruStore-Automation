@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23685" started-at="2019-12-03T10:22:37 IST" finished-at="2019-12-03T10:23:00 IST">
+  <suite name="Suite" duration-ms="70481" started-at="2019-12-20T14:52:23 IST" finished-at="2019-12-20T14:53:34 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23685" started-at="2019-12-03T10:22:37 IST" finished-at="2019-12-03T10:23:00 IST">
-      <class name="com.store.qa.testcases.PeopleAndTeamsPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.PeopleAndTeamsPageTest@26aa12dd]" name="setUp" is-config="true" duration-ms="20290" started-at="2019-12-03T10:22:37 IST" finished-at="2019-12-03T10:22:57 IST">
+    <test name="Test" duration-ms="70481" started-at="2019-12-20T14:52:23 IST" finished-at="2019-12-20T14:53:34 IST">
+      <class name="com.store.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.HomePageTest@51cdd8a]" name="setUp" is-config="true" duration-ms="6858" started-at="2019-12-20T14:53:08 IST" finished-at="2019-12-20T14:53:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyFollowUnFollow()[pri:0, instance:com.store.qa.testcases.PeopleAndTeamsPageTest@26aa12dd]" name="verifyFollowUnFollow" duration-ms="2085" started-at="2019-12-03T10:22:57 IST" finished-at="2019-12-03T10:22:59 IST">
+        <test-method status="PASS" signature="zuruLogoTest()[pri:0, instance:com.store.qa.testcases.HomePageTest@51cdd8a]" name="zuruLogoTest" duration-ms="1358" started-at="2019-12-20T14:53:15 IST" finished-at="2019-12-20T14:53:16 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyFollowUnFollow -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.PeopleAndTeamsPageTest@26aa12dd]" name="tearDown" is-config="true" duration-ms="1287" started-at="2019-12-03T10:22:59 IST" finished-at="2019-12-03T10:23:00 IST">
+        </test-method> <!-- zuruLogoTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.HomePageTest@51cdd8a]" name="tearDown" is-config="true" duration-ms="1008" started-at="2019-12-20T14:53:16 IST" finished-at="2019-12-20T14:53:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.store.qa.testcases.PeopleAndTeamsPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.store.qa.testcases.HomePageTest -->
+      <class name="com.store.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.LoginPageTest@71bbf57e]" name="setUp" is-config="true" duration-ms="8090" started-at="2019-12-20T14:52:23 IST" finished-at="2019-12-20T14:52:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.store.qa.testcases.LoginPageTest@71bbf57e]" name="loginPageTitleTest" duration-ms="7" started-at="2019-12-20T14:52:31 IST" finished-at="2019-12-20T14:52:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.LoginPageTest@71bbf57e]" name="tearDown" is-config="true" duration-ms="952" started-at="2019-12-20T14:52:31 IST" finished-at="2019-12-20T14:52:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.LoginPageTest@71bbf57e]" name="setUp" is-config="true" duration-ms="11818" started-at="2019-12-20T14:52:32 IST" finished-at="2019-12-20T14:52:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest()[pri:2, instance:com.store.qa.testcases.LoginPageTest@71bbf57e]" name="loginTest" duration-ms="1662" started-at="2019-12-20T14:52:44 IST" finished-at="2019-12-20T14:52:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.LoginPageTest@71bbf57e]" name="tearDown" is-config="true" duration-ms="1066" started-at="2019-12-20T14:52:46 IST" finished-at="2019-12-20T14:52:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.store.qa.testcases.LoginPageTest -->
+      <class name="com.store.qa.testcases.SearchPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.SearchPageTest@d44fc21]" name="setUp" is-config="true" duration-ms="12766" started-at="2019-12-20T14:53:17 IST" finished-at="2019-12-20T14:53:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyFirstProject()[pri:0, instance:com.store.qa.testcases.SearchPageTest@d44fc21]" name="verifyFirstProject" duration-ms="2338" started-at="2019-12-20T14:53:30 IST" finished-at="2019-12-20T14:53:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFirstProject -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.SearchPageTest@d44fc21]" name="tearDown" is-config="true" duration-ms="1036" started-at="2019-12-20T14:53:33 IST" finished-at="2019-12-20T14:53:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.store.qa.testcases.SearchPageTest -->
+      <class name="com.store.qa.testcases.ProjectPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.store.qa.testcases.ProjectPageTest@7f13d6e]" name="setUp" is-config="true" duration-ms="19639" started-at="2019-12-20T14:52:47 IST" finished-at="2019-12-20T14:53:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="navigateToHomePage()[pri:0, instance:com.store.qa.testcases.ProjectPageTest@7f13d6e]" name="navigateToHomePage" duration-ms="706" started-at="2019-12-20T14:53:06 IST" finished-at="2019-12-20T14:53:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToHomePage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.store.qa.testcases.ProjectPageTest@7f13d6e]" name="tearDown" is-config="true" duration-ms="1150" started-at="2019-12-20T14:53:07 IST" finished-at="2019-12-20T14:53:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.store.qa.testcases.ProjectPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

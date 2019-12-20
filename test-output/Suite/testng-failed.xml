@@ -9,9 +9,7 @@
           <include name="verifyFirstProjectPreview"/>
           <include name="verifyProjectNotFound"/>
           <include name="tearDown"/>
-          <include name="verifySearchBar"/>
-          <include name="verifySearchBarResult"/>
-          <include name="zuruLogoTest"/>
+          <include name="verifyFirstProject"/>
         </methods>
       </class> <!-- com.store.qa.testcases.SearchPageTest -->
     </classes>
